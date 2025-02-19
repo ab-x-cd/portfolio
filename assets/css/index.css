@@ -1,0 +1,195 @@
+/* Nécéssaires sur chaque page */
+
+html {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #1e1e1e; /* Noir-gris profond pour plus de contraste */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    color: white;
+    background: linear-gradient(to right, #0d0d0d, #222831);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#headerh1 {
+    color: #00e5ff; /* Cyan éclatant */
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#headerh1:hover {
+    text-shadow: 0px 0px 15px #00e5ff;
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+}
+
+/* BOUTONS */
+.CV button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: #007f8b; /* Cyan foncé */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.CV button:hover {
+    background: linear-gradient(to left, #00e5ff, #007f8b);
+    transform: scale(1.2);
+}
+
+/* SECTION PROJETS */
+#content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 6rem;
+    border-radius: 8px;
+}
+
+.projets {
+    background-color: #222831;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+    border: 2px solid #00e5ff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.projets h2 {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.projets:hover {
+    box-shadow: 0 0 20px #00e5ff;
+    transform: scale(1.1);
+    background: linear-gradient(to left, #007f8b, #222831);
+    color: white;
+    border-color: #00e5ff;
+}
+
+.projets:hover h2 {
+    color: inherit;
+}
+
+/* IMAGES */
+.projets img.images {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 45px;
+    margin-right: 1rem;
+}
+
+/* CONTACT */
+#contact {
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 60%;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #00e5ff;
+    background: rgba(0, 229, 255, 0.1);
+}
+
+/* FORMULAIRE */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #00e5ff;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+form button {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: #007f8b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to left, #00e5ff, #007f8b);
+    transform: scale(1.1);
+}
+
+form label {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
