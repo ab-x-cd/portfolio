@@ -1,69 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="">
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\css\index.css">
-
-    <title>Portfolio</title>
-</head>
-
-<body>
-    <header>
-        <h1 id="headerh1">Seitz Nathanaël</h1>
-        <div class="CV">
-            <button onclick="window.location.href='/path/to/cv.pdf'">Mon CV</button>
-        </div>
-    </header>
-
-    <main>  
-        <div id="content-wrapper">
-            <div id="projet1" class="projets">
-                <h2>Projets dev appli</h2>
-                <p>A compléter + tard</p>
-            </div>
-
-            <div id="projet2" class="projets" >
-                <a href="/animscss" style="text-decoration: none; color: inherit;">
-                <h2>Projets frontend + anims css</h2>
-                <p>A compléter + tard</p>
-                </a>
-            </div>
-
-            <div id="projet3" class="projets">
-                <h2>Projet 3</h2>
-                <p>A compléter + tard</p>
-            </div>
-
-            <div id="projet4" class="projets">
-                <h2>Projet 4</h2>
-                <p>A compléter + tard</p>
-            </div>
-
-        </div>
-
-        <section id="contact" class="projets">
-            <h2>Contactez-moi</h2>
-            <form action="submit_form.php" method="post">
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">Envoyer</button>
-            </form>
-        </section>
-
-    </main>
-
-</body>
-
-<footer>
-    <p>© 2024 Nathanaël Seitz</p>
-    <a href="https://www.linkedin.com/in/nathanaël-seitz/"> <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height=30px width=30px> </a>
-</footer>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

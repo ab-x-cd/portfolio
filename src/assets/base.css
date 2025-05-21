@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #121212; /* Noir plus profond pour un look moderne */
+  --vt-c-black-soft: #1e1e1e;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #333333;
+
+  --vt-c-divider-light-1: rgba(0, 0, 0, 0.1);
+  --vt-c-divider-light-2: rgba(0, 0, 0, 0.05);
+  --vt-c-divider-dark-1: rgba(255, 255, 255, 0.12);
+  --vt-c-divider-dark-2: rgba(255, 255, 255, 0.08);
+
+  --vt-c-text-light-1: var(--vt-c-black);
+  --vt-c-text-light-2: #4A4A4A; /* Gris légèrement plus foncé pour le texte secondaire */
+  --vt-c-text-dark-1: var(--vt-c-white-soft);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.7);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white-soft); /* Fond légèrement off-white */
+  --color-background-soft: var(--vt-c-white);
+  --color-background-mute: #f0f0f0;
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black-soft);
+    --color-background-soft: var(--vt-c-black);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; /* Ajout de padding: 0 pour réinitialiser */
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+  line-height: 1.6;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400; /* Poids de base pour Montserrat */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

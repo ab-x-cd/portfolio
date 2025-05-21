@@ -1,0 +1,38 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0; /* Réduit le padding global de l'application */
+  font-weight: normal;
+  /* background-color: var(--color-background); Déjà géré par body dans base.css */
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text); /* Utilise la variable de base.css pour la couleur du texte */
+  transition: 0.3s;
+  /* padding: 3px; Supprimé pour un style plus épuré */
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--primary); /* Utilise la couleur primaire du thème Vuetify pour le survol */
+    /* background-color: hsla(160, 100%, 37%, 0.2); Supprimé */
+  }
+}
+
+/* Suppression des styles @media spécifiques à #app et body pour laisser Vuetify gérer le layout principal */
+/*
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+*/
