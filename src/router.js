@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router' // Modifié ici
 import Home from '@/views/Home.vue'
 import ProjetsCpp from '@/views/ProjetsCpp.vue'
 import ProjetsCss from '@/views/ProjetsCss.vue' // Main page for CSS/Frontend projects
@@ -28,8 +28,24 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL), // Modifié ici
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  const redirectPath = sessionStorage.getItem('redirectPath');
+  if (redirectPath && to.path === '/') { // Uniquement si on est redirigé vers la racine
+    sessionStorage.removeItem('redirectPath');
+    // Vérifie si le redirectPath correspond à une route existante
+    const resolvedRoute = router.resolve(redirectPath);
+    if (resolvedRoute.matched.length > 0 && resolvedRoute.name !== 'NotFound') {
+      next(redirectPath);
+    } else {
+      next({ name: 'NotFound', params: { pathMatch: redirectPath.substring(1).split('/') } });
+    }
+  } else {
+    next();
+  }
+});
 
 export default router
