@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // Détermine le chemin de base (nom du dépôt sur GitHub Pages)
+    // Par exemple, si l'URL est https://user.github.io/repo-name/path/to/page
+    // pathname est /repo-name/path/to/page
+    // On veut que basePath soit /repo-name/
+    const pathSegments = window.location.pathname.split('/');
+    const basePath = '/' + (pathSegments[1] || '') + '/'; // ex: /portfolio/
+
+    // Récupère le chemin que l'utilisateur essayait d'atteindre, relatif à la base de l'application
+    // Par exemple, si pathname est /portfolio/foo/bar, on veut /foo/bar
+    // Le -1 sur basePath.length est pour s'assurer que le slash initial du chemin relatif est conservé.
+    const redirect = window.location.pathname.substring(basePath.length -1); 
+
+    // Stocke ce chemin dans sessionStorage pour que l'application principale puisse le lire
+    sessionStorage.setItem('redirectPath', redirect);
+
+    // Redirige vers la racine de l'application (index.html)
+    window.location.href = basePath;
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, please click <a id="home-link" href="#">here</a>.</p>
+  <script type="text/javascript">
+    // Met à jour le lien de secours au cas où JavaScript est désactivé après le chargement initial
+    // ou si la redirection échoue pour une raison quelconque.
+    const pathSegmentsForLink = window.location.pathname.split('/');
+    const basePathForLink = '/' + (pathSegmentsForLink[1] || '') + '/';
+    document.getElementById('home-link').href = basePathForLink;
+  </script>
+</body>
+</html>
