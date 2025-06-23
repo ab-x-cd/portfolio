@@ -6,7 +6,7 @@
       <v-btn text to="/" class="text-primary">Accueil</v-btn>
       <v-btn text to="/cpp-projects" class="text-primary">Projets Dev Appli</v-btn>
       <v-btn text to="/animscss" class="text-primary">Projets Frontend</v-btn>
-      <v-btn href="/cv.pdf" target="_blank" class="text-primary" prepend-icon="mdi-file-account">Mon CV</v-btn>
+      <v-btn href="/portfolio/cv.pdf" target="_blank" class="text-primary" prepend-icon="mdi-file-account">Mon CV</v-btn>
       <v-btn icon @click="toggleTheme" :color="isDarkMode ? 'accent' : 'primary'">
         <v-icon>{{ isDarkMode ? 'mdi-weather-night' : 'mdi-weather-sunny' }}</v-icon>
       </v-btn>

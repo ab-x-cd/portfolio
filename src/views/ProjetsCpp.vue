@@ -4,7 +4,8 @@
     <v-row justify="center">
       <v-col cols="12" md="10" lg="9">
         <v-row>
-          <v-col cols="12" md="6" lg="4" v-for="n in 3" :key="n">
+          <!-- ASCIIart Generator (cliquable) -->
+          <v-col cols="12" md="6" lg="4">
             <v-card class="project-card mx-auto my-4" elevation="4" hover>
               <v-img
                 src="/image_placeholder_cpp.jpg"
@@ -16,13 +17,50 @@
               </v-img>
               <v-card-text class="pt-4" style="min-height: 80px;">
                 Générateur d'art ASCII en C++ : convertit des images en représentations ASCII personnalisables.<br>
-                Gestion des niveaux de gris, interface console, et prise en charge de plusieurs formats d'entrée.
+                Gestion des niveaux de gris, interface console, et prise en charge de plusieurs formats d'entrée.<br>
+                <strong>Repo GitHub :</strong> <a href="https://github.com/ab-x-cd/GADT" target="_blank">ab-x-cd/GADT</a>
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
+                <v-btn color="accent" href="/portfolio/projetscpp/asciiart-generator" >Détails <v-icon right>mdi-arrow-right</v-icon></v-btn>
                 <v-btn color="accent" text href="https://github.com/ab-x-cd/GADT" target="_blank">
-                  Voir sur GitHub <v-icon right>mdi-open-in-new</v-icon></v-btn>
+                  GitHub <v-icon right>mdi-open-in-new</v-icon>
+                </v-btn>
               </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <!-- PLSA : Project Legion Story of Amaltheis (placeholder, non cliquable) -->
+          <v-col cols="12" md="6" lg="4">
+            <v-card class="project-card mx-auto my-4" elevation="4" hover>
+              <v-img
+                src="/image_placeholder_cpp.jpg"
+                height="200px"
+                cover
+                class="align-end text-white"
+              >
+                <v-card-title class="card-title-bg">PLSA : Project Legion Story of Amaltheis</v-card-title>
+              </v-img>
+              <v-card-text class="pt-4" style="min-height: 80px;">
+                en cours de développement...
+              </v-card-text>
+            </v-card>
+          </v-col>
+
+          <!-- Comparaison d'algorithmes par efficacité et complexité (placeholder, non cliquable) -->
+          <v-col cols="12" md="6" lg="4">
+            <v-card class="project-card mx-auto my-4" elevation="4" hover>
+              <v-img
+                src="/image_placeholder_cpp.jpg"
+                height="200px"
+                cover
+                class="align-end text-white"
+              >
+                <v-card-title class="card-title-bg">Comparaison d'algorithmes par efficacité et complexité</v-card-title>
+              </v-img>
+              <v-card-text class="pt-4" style="min-height: 80px;">
+                en cours de développement...
+              </v-card-text>
             </v-card>
           </v-col>
         </v-row>

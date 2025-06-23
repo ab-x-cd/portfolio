@@ -24,6 +24,11 @@ const routes = [
     name: 'SolarSystem',
     component: SolarSystem
   },
+  {
+    path: '/projetscpp/asciiart-generator',
+    name: 'AsciiartGenerator',
+    component: () => import('@/views/AsciiartGenerator.vue')
+  },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
@@ -34,7 +39,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const redirectPath = sessionStorage.getItem('redirectPath');
-  if (redirectPath && to.path === '/') { // Uniquement si on est redirigé vers la racine
+  if (redirectPath && to.path === '/portfolio/') { // Uniquement si on est redirigé vers la racine
     sessionStorage.removeItem('redirectPath');
     // Vérifie si le redirectPath correspond à une route existante
     const resolvedRoute = router.resolve(redirectPath);

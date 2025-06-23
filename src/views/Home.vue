@@ -68,7 +68,7 @@
     <v-container id="projects-section" class="my-10">
       <v-row justify="center">
 <v-col cols="12" md="6">
-  <v-card class="project-card mx-auto my-4" elevation="4" hover>
+  <v-card class="project-card eco-card mx-auto my-4" elevation="4">
     <v-img height="200px" src="/path/to/eco-responsable.jpg" cover class="align-end text-white">
       <v-card-title class="card-title-bg">Numérique Responsable</v-card-title>
     </v-img>
@@ -108,7 +108,7 @@
           <p class="text-body-1 text-secondary">
             Actuellement étudiant en BUT Informatique, je suis un développeur curieux et motivé, toujours à la recherche de nouveaux défis pour affûter mes compétences en développement logiciel et web. Ce portfolio est une vitrine de mon parcours et de mes réalisations.
           </p>
-           <v-btn color="primary" outlined class="mt-6" href="cv.pdf" target="_blank" prepend-icon="mdi-file-download-outline">
+           <v-btn color="primary" outlined class="mt-6" href="portfolio/cv.pdf" target="_blank" prepend-icon="mdi-file-download-outline">
             Télécharger mon CV
           </v-btn>
         </v-col>
@@ -137,29 +137,77 @@
 }
 
 .project-card {
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  border-radius: 8px; /* Bords légèrement arrondis */
-  background-color: var(--v-theme-surface);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--v-theme-surface) 80%, rgba(var(--v-theme-accent-rgb),0.08) 100%);
+  box-shadow: 0 4px 24px 0 rgba(var(--v-theme-primary-rgb), 0.07);
+  border: 1.5px solid rgba(var(--v-theme-accent-rgb), 0.18);
+  overflow: hidden;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px -4px rgba(var(--v-theme-primary-rgb), 0.2) !important;
+.project-card .v-img {
+  filter: grayscale(0.15) brightness(0.95) contrast(1.08);
+  border-bottom: 1px solid rgba(var(--v-theme-accent-rgb), 0.12);
 }
 
-.card-title-bg {
+.project-card .card-title-bg {
   background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%);
   padding-top: 16px;
   padding-bottom: 16px;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
-.v-card-text {
-  min-height: 60px; /* Pour aligner la hauteur des textes */
-  color: var(--v-theme-on-surface);
+/* Style spécial pour la carte Numérique Responsable */
+.project-card.eco-card {
+  background: linear-gradient(120deg, #e3f9e5 60%, var(--v-theme-surface) 100%);
+  border: 2px solid var(--v-theme-accent);
+  box-shadow: 0 6px 32px 0 rgba(var(--v-theme-accent-rgb), 0.10);
+  position: relative;
+  overflow: visible;
 }
 
-.v-card-actions .v-btn {
-  font-weight: 500;
+.project-card.eco-card .v-img {
+  filter: grayscale(0.05) brightness(1.05) contrast(1.12);
+  border-bottom: 2px solid var(--v-theme-accent);
+}
+
+.project-card.eco-card .card-title-bg {
+  background: linear-gradient(90deg, var(--v-theme-accent) 0%, #fffbe7 100%);
+  color: #1976D2;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 12px 0 rgba(var(--v-theme-accent-rgb), 0.08);
+}
+
+.project-card.eco-card .v-card-text {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+.project-card.eco-card .v-card-text p {
+  margin-bottom: 0.9em;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: #234d20;
+  background: linear-gradient(90deg, rgba(25,213,255,0.07) 0%, rgba(25,255,120,0.04) 100%);
+  border-left: 4px solid var(--v-theme-accent);
+  padding: 0.9em 1.2em 0.9em 1.4em;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 2px 10px 0 rgba(var(--v-theme-accent-rgb), 0.06);
+  transition: background 0.3s;
+}
+
+.project-card.eco-card .v-card-text p strong {
+  color: var(--v-theme-accent);
+  font-weight: 700;
+}
+
+.project-card.eco-card .v-card-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* Animations d'entrée simples */
