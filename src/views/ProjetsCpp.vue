@@ -22,7 +22,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <router-link :to="'/portfolio/projetscpp/asciiart-generator'" custom v-slot="{ navigate, href }">
+                <router-link :to="'/projetscpp/asciiart-generator'" custom v-slot="{ navigate, href }">
                   <v-btn color="accent" :href="href" @click="navigate">
                     Détails <v-icon right>mdi-arrow-right</v-icon>
                   </v-btn>
