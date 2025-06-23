@@ -65,6 +65,41 @@
       </v-row>
     </v-container>
 
+    <v-container id="projects-section" class="my-10">
+      <v-row justify="center">
+<v-col cols="12" md="6">
+  <v-card class="project-card mx-auto my-4" elevation="4" hover>
+    <v-img height="200px" src="/path/to/eco-responsable.jpg" cover class="align-end text-white">
+      <v-card-title class="card-title-bg">Numérique Responsable</v-card-title>
+    </v-img>
+    <v-card-text class="pt-4">
+      <p>🌱 <strong>Numérique Responsable</strong><br>
+      Le secteur numérique représente aujourd'hui 4% des émissions mondiales de GES. J'ai fait du numérique responsable un pilier central de ma pratique professionnelle.</p>
+      <p>🎯 <strong>Ma Vision</strong><br>
+      Pour moi, le numérique responsable ne se limite pas à développer des applications "vertes". Il s'agit de concevoir des architectures et algorithmes où la légèreté, l'optimisation et la maintenabilité sont prioritaires.</p>
+      <p>⚡ <strong>Optimisation et Performance</strong><br>
+      Choix technologiques éclairés : Frameworks performants et durables<br>
+      Code optimisé : Réduction de la consommation de ressources<br>
+      Accessibilité numérique : Conception inclusive pour tous<br>
+      Gestion des médias : Compression et optimisation<br>
+      Architecture sobre : Minimisation des requêtes</p>
+      <p>🤖 <strong>L'IA : Un Outil à Double Tranchant</strong><br>
+      L'IA permet de gagner du temps et d'améliorer la qualité du code, mais je reste conscient de son impact environnemental. J'adopte une approche raisonnée :<br>
+      Prompts optimisés : Rédaction efficace pour minimiser les interactions<br>
+      Usage ciblé : Utilisation uniquement quand nécessaire<br>
+      Alternatives locales : Privilégier les outils locaux</p>
+      <p>📊 <strong>Mes Pratiques Concrètes</strong><br>
+      Éco-conception : Audit avec Lighthouse et EcoIndex<br>
+      Accessibilité : Tests WCAG et RGAA<br>
+      Sobriété numérique : Fonctionnalités au strict nécessaire</p>
+      <p>💡 <strong>Un Engagement Continu</strong><br>
+      Le numérique responsable est un processus d'amélioration continue. Cette démarche améliore la performance, la maintenabilité et la compétitivité des solutions développées.</p>
+    </v-card-text>
+  </v-card>
+</v-col>
+      </v-row>
+    </v-container>
+
     <!-- Section "À propos" ou "Compétences" (Optionnel) -->
     <v-container class="my-10">
       <v-row justify="center">
