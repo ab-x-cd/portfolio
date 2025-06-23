@@ -19,11 +19,11 @@
             </ul>
             <p><strong>Installation & Utilisation :</strong></p>
             <ol>
-              <li>Cloner le dépôt : <code>git clone https://github.com/ab-x-cd/GADT.git</code></li>
-              <li>Se placer dans <code>ASCIIArtGenerator</code></li>
-              <li>Créer un dossier <code>build</code> puis s'y déplacer</li>
-              <li>Compiler avec CMake : <code>cmake ..</code> puis <code>cmake --build . --config Release</code></li>
-              <li>Lancer l'exécutable <code>./ASCIIArtGenerator</code></li>
+              <li>Cloner le dépôt : git clone https://github.com/ab-x-cd/GADT.git</li>
+              <li>Se placer dans ASCIIArtGenerator</li>
+              <li>Créer un dossier build puis s'y déplacer</li>
+              <li>Compiler avec CMake : cmake .. puis cmake --build . --config Release</li>
+              <li>Lancer l'exécutable ./ASCIIArtGenerator</li>
             </ol>
             <p>Pour plus de détails, consultez le <a href="https://github.com/ab-x-cd/GADT" target="_blank">repo GitHub <v-icon small>mdi-open-in-new</v-icon></a>.</p>
           </v-card-text>
