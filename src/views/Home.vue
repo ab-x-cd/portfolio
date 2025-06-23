@@ -73,7 +73,7 @@
           <p class="text-body-1 text-secondary">
             Actuellement étudiant en BUT Informatique, je suis un développeur curieux et motivé, toujours à la recherche de nouveaux défis pour affûter mes compétences en développement logiciel et web. Ce portfolio est une vitrine de mon parcours et de mes réalisations.
           </p>
-           <v-btn color="primary" outlined class="mt-6" href="/path/to/cv.pdf" target="_blank" prepend-icon="mdi-file-download-outline">
+           <v-btn color="primary" outlined class="mt-6" href="cv.pdf" target="_blank" prepend-icon="mdi-file-download-outline">
             Télécharger mon CV
           </v-btn>
         </v-col>

@@ -12,15 +12,16 @@
                 cover
                 class="align-end text-white"
               >
-                <v-card-title class="card-title-bg">Projet C++ {{ n }}</v-card-title>
+                <v-card-title class="card-title-bg">ASCIIart Generator</v-card-title>
               </v-img>
               <v-card-text class="pt-4" style="min-height: 80px;">
-                Description du projet de développement applicatif #{{ n }}.
-                Ce projet mettra en avant des compétences spécifiques en C++ et la résolution de problèmes complexes.
+                Générateur d'art ASCII en C++ : convertit des images en représentations ASCII personnalisables.<br>
+                Gestion des niveaux de gris, interface console, et prise en charge de plusieurs formats d'entrée.
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="accent" text disabled>Voir détails <v-icon right>mdi-arrow-right</v-icon></v-btn>
+                <v-btn color="accent" text href="https://github.com/ab-x-cd/GADT" target="_blank">
+                  Voir sur GitHub <v-icon right>mdi-open-in-new</v-icon></v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
